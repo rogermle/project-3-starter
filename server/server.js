@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'node:path'
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.get('/api', (req, res) => {
   res.send('Hello from the Node.js backend api!');
@@ -12,6 +12,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
