@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'node:path'
+const __dirname = import.meta.dirname;
 const app = express();
 const PORT = process.env.PORT || 3001;
 
